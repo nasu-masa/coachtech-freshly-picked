@@ -1,0 +1,81 @@
+/* =========================
+    Utility（共通）
+========================= */
+
+/* ---------- Layout ---------- */
+
+.u-flex {
+    display: flex;
+}
+
+.u-flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.u-flex-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+.u-inline-block {
+    display: inline-block;
+}
+
+/* ---------- Visual ---------- */
+
+.u-shadow {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* ---------- Width ---------- */
+
+.u-w-100 {
+    width: 100%;
+}
+
+/* ---------- Margin ---------- */
+
+.u-mt-5 {
+    margin-top: 5px;
+}
+
+/* ---------- Reset ---------- */
+
+.u-border-none {
+    border: none;
+}
+
+.u-text-decoration-none {
+    text-decoration: none;
+}
+
+/* ---------- Font ---------- */
+
+.u-color-black {
+    color: #000;
+}
+
+.u-font-size-16px {
+    font-size: 16px;
+}
+
+.u-font-weight-bold {
+    font-weight: bold;
+}
+
+/* ---------- Cursor ---------- */
+
+.u-cursor-pointer {
+    cursor: pointer;
+}
+
+/* ---------- Hover ---------- */
+
+.u-hover-opacity {
+    transition: opacity 0.2s;
+}
+
+.u-hover-opacity:hover {
+    opacity: 0.5;
+}

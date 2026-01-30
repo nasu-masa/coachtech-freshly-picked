@@ -1,0 +1,347 @@
+/* ========================================
+    Product Page
+======================================== */
+
+/* ---------- Base ---------- */
+
+.product {
+    padding: 0 30px;
+}
+
+.product__title {
+    margin: 0;
+    font-size: 24px;
+}
+
+/* ---------- Add Button ---------- */
+
+.product__add-button {
+    margin-bottom: 10px;
+    padding: 7px 15px;
+    background-color: #ffa929;
+    border-radius: 5px;
+    color: black;
+}
+
+.product__controls {
+    width: 180px;
+    margin-right: 20px;
+}
+
+/* ---------- Search ---------- */
+
+.product__search-input {
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.product__search-button {
+    background-color: #f5c800;
+    margin: 20px 0;
+    padding: 6px 0;
+    border-radius: 3px;
+}
+
+/* ---------- Sort ---------- */
+
+.product__sort {
+    margin-top: 15px;
+}
+
+.product__sort-form {
+    border-bottom: 2px solid #ddd;
+}
+
+.product__sort-select {
+    margin: 15px 0;
+    padding: 8px 5px;
+    border-radius: 3px;
+}
+
+select:invalid {
+    color: #aaa;
+}
+
+select option[value=""] {
+    color: #adadad;
+}
+
+select option {
+    color: #000;
+}
+
+.sort-modal,
+.sort-modal__close {
+    border: 3px solid #f7e598;
+}
+
+.sort-modal {
+    margin-bottom: 15px;
+    padding: 5px;
+    border-radius: 25px;
+    font-size: 14px;
+}
+
+.sort-modal__close {
+    padding: 0 3px;
+    font-size: 11px;
+    color: rgb(255, 204, 0);
+    border-radius: 50px;
+}
+
+/* ---------- Grid ---------- */
+
+.product__grid {
+    flex-wrap: wrap;
+    gap: 19px;
+}
+
+.product__card {
+    width: 310px;
+    overflow: hidden;
+    border-radius: 5px;
+}
+
+/* ---------- Image ---------- */
+
+.product__image {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+/* ---------- Content ---------- */
+
+.product__content {
+    background-color: #ffffff;
+    padding: 10px 15px;
+}
+
+/* ---------- Pagination ---------- */
+
+/*
+    商品一覧のカード数によって親要素の幅が変動するため、
+    ページネーションを .product__grid の外に配置している。
+    そのままだと商品一覧の中央からずれるため、位置調整として translateX を使用。
+*/
+.product__pagination {
+    gap: 0 8px;
+    list-style: none;
+    padding: 0;
+    transform: translateX(50px);
+}
+
+.product__pagination-link {
+    display: flex;
+    justify-content: center;
+    width: 2em;
+    height: 2em;
+    border-radius: 25px;
+    background-color: #ffffff;
+    color: #000;
+    text-decoration: none;
+}
+
+.product__pagination,
+.product__pagination-link {
+    align-items: center;
+}
+
+.product__pagination-item--current .product__pagination-link {
+    background-color: #f5c800;
+    color: #fff;
+    pointer-events: none;
+}
+
+
+/* ========================================
+    Show Page
+======================================== */
+
+/* ---------- Layout ---------- */
+
+.product-show,
+.product-create {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.breadcrumb__parent {
+    color: #5caffc;
+}
+
+.product-show__container {
+    margin-bottom: 20px;
+}
+
+.product-show__file,
+.product-show__content {
+    width: 50%;
+}
+
+/* ---------- Inputs ---------- */
+
+.input-file,
+.product-show__description,
+.input,
+.input-checkbox {
+    margin-top: 20px;
+}
+
+.input-file {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.input-file__native {
+    /* ネイティブ input を隠す */
+    display: none;
+}
+
+.input-file__button {
+    display: inline-block;
+    padding: 4px 6px;
+    background-color: #ccc;
+    border: 2px solid #777777;
+    border-radius: 2px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.input-file__button:hover {
+    background-color: #aaa;
+}
+
+.input-file__name {
+    color: #808080;
+}
+
+.product-show__content {
+    padding-left: 30px;
+}
+
+.product-show__image,
+.product-create__image {
+    aspect-ratio: 4 / 3;
+}
+
+.product-show__label {
+    display: block;
+}
+
+.product-show__season,
+.product-create__season {
+    margin-right: 40px;
+}
+
+.input {
+    width: 100%;
+    padding: 15px 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.input-checkbox {
+    width: 20px;
+    height: 20px;
+    vertical-align: -4px;
+    border: 1px solid #000;
+    border-radius: 50px;
+    appearance: none;
+}
+
+.input-checkbox:checked {
+    position: relative;
+    background-color: #4b4b4b;
+}
+
+.input-checkbox:checked::after {
+    position: absolute;
+    content: "✓";
+    top: 0px;
+    left: 5px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.input--textarea {
+    height: 200px;
+    line-height: 1.6;
+    resize: none;
+}
+
+.input--error {
+    height: 30px;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.input--error,
+.product-create__required,
+.product-create__seasons {
+    color: red;
+    font-size: 15px;
+}
+
+/* ---------- Buttons ---------- */
+
+.buttons {
+    gap: 16px;
+}
+
+.back-button,
+.submit-button {
+    width: 200px;
+    padding: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.back-button {
+    background-color: #eee;
+    text-align: center;
+    text-decoration: none;
+}
+
+.submit-button {
+    background-color: rgb(255, 200, 0);
+}
+
+/* ---------- Delete Button ---------- */
+
+.delete-form {
+    position: relative;
+}
+
+.delete-form__button {
+    position: absolute;
+    right: 0;
+    transform: translateY(-50px);
+    width: 40px;
+    height: 40px;
+    background:
+        url('/icon/red.trash.icon.png') no-repeat center / 70px;
+}
+
+
+/* ========================================
+    Create Page
+======================================== */
+
+.product-create__required {
+    margin-left: 10px;
+    background-color: red;
+    color: #fff;
+}
+
+.product-create__required,
+.product-create__seasons {
+    padding: 0 8px;
+}
+
+.product-create__preview {
+    max-width: 310px;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
