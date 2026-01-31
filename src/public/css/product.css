@@ -251,8 +251,8 @@ select option {
     position: absolute;
     content: "✓";
     top: 0px;
-    left: 5px;
-    font-size: 12px;
+    left: 3px;
+    font-size: 13px;
     color: #fff;
 }
 
