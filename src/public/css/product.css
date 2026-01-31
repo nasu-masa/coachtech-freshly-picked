@@ -20,8 +20,8 @@
 }
 
 .product__controls {
-    width: 180px;
-    margin-right: 20px;
+    width: 20%;
+    margin-right: 10px;
 }
 
 /* ---------- Search ---------- */
@@ -89,7 +89,7 @@ select option {
 
 .product__grid {
     flex-wrap: wrap;
-    gap: 19px;
+    gap: 18px;
 }
 
 .product__card {
@@ -114,16 +114,10 @@ select option {
 
 /* ---------- Pagination ---------- */
 
-/*
-    商品一覧のカード数によって親要素の幅が変動し横方向の位置がずれるため、
-    ページネーションを .product__grid の外に配置している。
-    そのままだと商品一覧の中央からずれているため、位置調整として translateX を使用。
-*/
 .product__pagination {
     gap: 0 8px;
     list-style: none;
     padding: 0;
-    transform: translateX(50px);
 }
 
 .product__pagination-link {

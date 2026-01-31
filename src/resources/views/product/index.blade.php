@@ -40,7 +40,7 @@
                     name="keyword"
                     placeholder="商品名で検索"
                     value="{{ request('keyword') }}"
-                    class="product__search-input u-border-none">
+                    class="product__search-input u-w-100 u-border-none">
 
                 <button type="submit"
                     class="product__search-button
@@ -110,7 +110,7 @@
 
         </div>
 
-        <div class="product__list">
+        <div class="product__list u-w-100">
             <div class="product__grid u-flex">
 
                 @foreach ($products as $product)
@@ -138,14 +138,13 @@
                 @endforeach
 
             </div>
+
+            <div class="product__pagination u-flex-center">
+                {{ $products->links('vendor.pagination.default') }}
+            </div>
+
         </div>
-
     </div>
-
-    <div class="product__pagination u-flex-center">
-        {{ $products->links('vendor.pagination.default') }}
-    </div>
-
 </div>
 
 @endsection
