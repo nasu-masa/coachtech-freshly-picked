@@ -31,6 +31,7 @@
         <div class="product-show__container u-w-100 u-flex">
 
             <div class="product-show__file u-inline-block">
+
                 @if (!$errors->has('image'))
                 {{-- バリデーションエラーがないときだけ既存画像を表示 --}}
                 <img src="{{ asset('storage/' . $product->image) }}"
@@ -111,7 +112,8 @@
                             id="season-{{ $season->id }}"
                             value="{{ $season->id }}"
                             class="input-checkbox u-cursor-pointer"
-                            {{ in_array($season->id, old('season', $product->seasons->pluck('id')->toArray())) ? 'checked' : '' }}>
+                            {{ in_array($season->id, old('season', $product->seasons
+                            ->pluck('id')->toArray())) ? 'checked' : '' }}>
 
                         {{ $season->name }}
                     </label>
@@ -178,10 +180,13 @@
         @csrf
         @method('DELETE')
 
+        @if (!$errors->any())
+        {{-- バリデーションエラーがないときだけ表示 --}}
         <button class="delete-form__button
                     u-border-none
                     u-cursor-pointer">
         </button>
+        @endif
 
     </form>
 
