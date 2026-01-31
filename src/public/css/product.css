@@ -269,7 +269,7 @@ select option {
 
 .input--error,
 .product-create__required,
-.product-create__seasons {
+.product-create__selects {
     color: red;
     font-size: 15px;
 }
@@ -326,8 +326,8 @@ select option {
 }
 
 .product-create__required,
-.product-create__seasons {
-    padding: 0 8px;
+.product-create__selects {
+    padding: 3px 8px;
 }
 
 .product-create__preview {

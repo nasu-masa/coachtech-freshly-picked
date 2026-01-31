@@ -93,7 +93,7 @@
         <div class="product-create__group">
             <label class="product-create__label">季節</label>
             <span class="product-create__required">必須</span>
-            <span class="product-create__seasons">複数選択可</span>
+            <span class="product-create__selects u-font-weight-bold">複数選択可</span>
 
             <div class="product-create__season-list">
                 @foreach ($seasons as $season)
