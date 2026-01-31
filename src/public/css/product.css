@@ -4,10 +4,6 @@
 
 /* ---------- Base ---------- */
 
-.product {
-    padding: 0 30px;
-}
-
 .product__title {
     margin: 0;
     font-size: 24px;
@@ -119,9 +115,9 @@ select option {
 /* ---------- Pagination ---------- */
 
 /*
-    商品一覧のカード数によって親要素の幅が変動するため、
+    商品一覧のカード数によって親要素の幅が変動し横方向の位置がずれるため、
     ページネーションを .product__grid の外に配置している。
-    そのままだと商品一覧の中央からずれるため、位置調整として translateX を使用。
+    そのままだと商品一覧の中央からずれているため、位置調整として translateX を使用。
 */
 .product__pagination {
     gap: 0 8px;
@@ -180,11 +176,11 @@ select option {
 
 /* ---------- Inputs ---------- */
 
-.input-file,
-.product-show__description,
 .input,
-.input-checkbox {
-    margin-top: 20px;
+.input-file,
+.input-checkbox,
+.product-show__description {
+    margin-top: 17px;
 }
 
 .input-file {

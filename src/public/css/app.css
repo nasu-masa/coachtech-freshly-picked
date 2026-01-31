@@ -11,7 +11,6 @@ body {
 .product__header {
     background-color: #fff;
     padding: 0 15px;
-    margin-bottom: 70px;
 }
 
 .product__logo {
@@ -25,5 +24,6 @@ body {
 
 main {
     max-width: 1230px;
-    margin: 0 auto;
+    margin: 70px auto;
+    padding: 0 30px;
 }
