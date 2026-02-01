@@ -1,6 +1,7 @@
-# coachtech-Freshly-picked
+# coachtech-freshly-picked
 
 ## ◎ フレームワーク / ライブラリ
+
 Laravel 8.x
 
 本アプリケーションは、
@@ -23,21 +24,24 @@ Laravel 8.x
 ## ◎ セットアップ手順
 
 ```
-git clone git@github.com:nasu-masa/coachtech-Freshly-picked.git
-cd coachtech-Freshly-picked
+git clone git@github.com:nasu-masa/coachtech-freshly-picked.git
+cd coachtech-freshly-picked
 ```
 
 ### Docker 起動
+
 ```
 docker-compose up -d --build
 ```
 
 ### PHP コンテナに入る
+
 ```
 docker-compose exec php bash
 ```
 
 ### Laravel セットアップ
+
 ```
 composer install
 cp .env.example .env   # 環境変数を適宜変更
@@ -45,6 +49,7 @@ php artisan key:generate
 ```
 
 ### 画像保存のセットアップ
+
 画像は `storage/app/public` に保存されます。
 初回セットアップ時は以下を実行してください：
 
@@ -53,6 +58,7 @@ php artisan storage:link
 ```
 
 ### データベース構築
+
 ```
 php artisan migrate
 php artisan db:seed
@@ -65,7 +71,7 @@ php artisan migrate --seed
 ## ◎ 開発環境
 
 - 商品一覧画面 : http://localhost/products
-- phpMyAdmin  : http://localhost:8080
+- phpMyAdmin : http://localhost:8080
 
 ---
 
@@ -111,11 +117,12 @@ Windows 環境では 8.0.26 でも動作しますが、環境差によるトラ�
 ---
 
 # ◎ ER 図
+
 ![ER図](docs/er.png)
 
 ---
 
-## ◎ 機能一覧（Freshly-picked）
+## ◎ 機能一覧（freshly-picked）
 
 - 商品一覧表示
 - 商品検索（キーワード）
@@ -169,7 +176,7 @@ public/css/
 ## ◎ Controller 構成
 
 - ProductController.php
-（商品一覧・検索・詳細・更新・削除・登録を担当）
+  （商品一覧・検索・詳細・更新・削除・登録を担当）
 
 ---
 
