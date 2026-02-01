@@ -115,6 +115,8 @@
                     <label for="season-{{ $season->id }}"
                         class="product-show__season">
 
+                        <input type="hidden" value="" name="season[]">
+
                         <input type="checkbox"
                             name="season[]"
                             id="season-{{ $season->id }}"

@@ -12,6 +12,25 @@ class UpdateProductRequest extends FormRequest
     }
 
     /**
+     * チェックボックスの hidden により、未選択でも season[] = "" が送信される。
+     * 空文字が1件でも入っていると Laravel は「値が1件ある」と判定し、
+     * required が正しく発火しないため、空文字・null を除去して空配列に正規化する。
+     */
+    protected function prepareForValidation()
+    {
+        if ($this->has('season')) {
+            $clean = collect($this->season)
+                ->filter(fn($v) => $v !== '' && $v !== null) // 空文字・null を除去
+                ->values()                                   // 空配列として扱わせるためにキーを詰め直す
+                ->toArray();
+
+            $this->merge([
+                'season' => $clean,
+            ]);
+        }
+    }
+
+    /**
      * 商品詳細・更新画面バリデーションルール
      */
     public function rules()
