@@ -9,12 +9,12 @@
 <div class="product u-w-100">
 
     <div class="product__heading u-flex-between">
-        <h1 class="product__title u-inline-block">
-            @if (request('keyword'))
-            "{{ request('keyword') }}"
+        <h2 class="product__title u-inline-block">
+            @if (request('search'))
+            "{{ request('search') }}"
             @endif
             商品一覧
-        </h1>
+        </h2>
 
         <a href="{{ route('products.create') }}"
             class="product__add-button
@@ -37,10 +37,12 @@
                 class="product__search-form">
 
                 <input type="text"
-                    name="keyword"
+                    name="search"
                     placeholder="商品名で検索"
-                    value="{{ request('keyword') }}"
+                    value="{{ request('search') }}"
                     class="product__search-input u-w-100 u-border-none">
+
+                <input type="hidden" name="sort" value="{{ request('sort') }}">
 
                 <button type="submit"
                     class="product__search-button
@@ -62,6 +64,8 @@
             <form action="{{ route('products.index') }}" method="get"
                 class="product__sort-form">
 
+                <input type="hidden" name="search" value="{{ request('search') }}">
+
                 <select name="sort"
                     class="product__sort-select
                             u-w-100
@@ -70,16 +74,18 @@
                     onchange="this.form.submit()"
                     required>
 
-                    <option value="" disabled selected>
+                    <option value="" class="product__sort-selected" selected>
                         価格で並び替え
                     </option>
 
                     <option value="price_desc"
+                        class="product__sort-option"
                         {{ request('sort') == 'price_desc' ? 'selected' : '' }}>
                         高い順に表示
                     </option>
 
                     <option value="price_asc"
+                        class="product__sort-option"
                         {{ request('sort') == 'price_asc' ? 'selected' : '' }}>
                         低い順に表示
                     </option>

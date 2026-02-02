@@ -8,9 +8,9 @@
 
 <div class="product-create">
 
-    <h1 class="product-create__title">
+    <h2 class="product-create__title">
         商品登録
-    </h1>
+    </h2>
 
     <form method="post"
         action="{{ route('products.store') }}"

@@ -54,15 +54,15 @@
     border-radius: 3px;
 }
 
-select:invalid {
+.product__sort-select:invalid {
     color: #aaa;
 }
 
-select option[value=""] {
-    color: #adadad;
+.product__sort-selected {
+    color: #aaa;
 }
 
-select option {
+.product__sort-option {
     color: #000;
 }
 

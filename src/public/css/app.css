@@ -2,7 +2,7 @@
     Layout（全ページ共通）
 ========================= */
 
-body {
+.product__body {
     background-color: #f8f8f8;
     font-family: "Hiragino Sans", "Yu Gothic", "Meiryo", sans-serif;
 }
@@ -23,7 +23,7 @@ body {
 
 /* ---------- Main Container ---------- */
 
-main {
+.product__main {
     max-width: 1230px;
     margin: 70px auto;
     padding: 0 30px;
